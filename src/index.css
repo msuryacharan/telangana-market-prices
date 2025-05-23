@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --saffron: #FF9933;
+  --white: #FFFFFF;
+  --green: #138808;
+  --navy: #000080;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  @apply antialiased text-gray-800;
+}
+
+@layer utilities {
+  .transition-fast {
+    transition-duration: 150ms;
+  }
+  
+  .transition-medium {
+    transition-duration: 300ms;
+  }
+}
+
+/* Custom animation for price change */
+@keyframes pulse-green {
+  0%, 100% {
+    background-color: rgba(19, 136, 8, 0.1);
+  }
+  50% {
+    background-color: rgba(19, 136, 8, 0.2);
+  }
+}
+
+@keyframes pulse-saffron {
+  0%, 100% {
+    background-color: rgba(255, 153, 51, 0.1);
+  }
+  50% {
+    background-color: rgba(255, 153, 51, 0.2);
+  }
+}
+
+.animate-pulse-green {
+  animation: pulse-green 2s infinite;
+}
+
+.animate-pulse-saffron {
+  animation: pulse-saffron 2s infinite;
+}
